@@ -9,7 +9,7 @@ let message = "";
 boxKey.onmousedown = body.onkeydown = pressing;
 function pressing (event){
     let checkBoxDelete = false;
-    let clickElement = event.target;
+    let clickElement = event.target.closest('.key__btn');
 
     if(event.code !== undefined){
 

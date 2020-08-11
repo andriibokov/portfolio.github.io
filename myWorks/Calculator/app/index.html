@@ -24,28 +24,37 @@
             <button class="key__btn" data-key="CE" value="CE">CE</button>
             <button class="key__btn" data-key="C" value="C">C</button>
             <button class="key__btn" data-key="Delete" value="Delete">Delete</button>
-            <button class="key__btn" data-key="decimal" value="1/x">1/x</button>
-            <button class="key__btn" data-key="pow" value="x2">x2</button>
-            <button class="key__btn" data-key="squareRoot" value="2№x">2№x</button>
-            <button class="key__btn" data-key="round" value="/">/</button>
+            <button class="key__btn fraction" data-key="decimal" value="1/x">1/x</button>
+            <button class="key__btn" data-key="pow" value="x2">X<sup><small>2</small></sup></button>
+            <button class="key__btn" data-key="squareRoot" value="squareRoot">&#x221aX</button>
+            <button class="key__btn" data-key="round" value="/"><span class="btn__round">&#247</span></button>
             <button class="key__btn" data-key="number" value="7">7</button>
             <button class="key__btn" data-key="number" value="8">8</button>
             <button class="key__btn" data-key="number" value="9">9</button>
-            <button class="key__btn" data-key="round" value="*">X</button>
+            <button class="key__btn" data-key="round" value="*"><span class="btn__round">&#215</span></button>
             <button class="key__btn" data-key="number" value="4">4</button>
             <button class="key__btn" data-key="number" value="5">5</button>
             <button class="key__btn" data-key="number" value="6">6</button>
-            <button class="key__btn" data-key="round" value="-">-</button>
+            <button class="key__btn" data-key="round" value="-"><span class="btn__round">-</span></button>
             <button class="key__btn" data-key="number" value="1">1</button>
             <button class="key__btn" data-key="number" value="2">2</button>
             <button class="key__btn" data-key="number" value="3">3</button>
-            <button class="key__btn" data-key="round" value="+">+</button>
-            <button class="key__btn" data-key="minus" value=" -">+/-</button>
+            <button class="key__btn" data-key="round" value="+"><span class="btn__round">+</span></button>
+            <button class="key__btn" data-key="minus" value=" -"><span class="btn__round">&#177</span></button>
             <button class="key__btn" data-key="number" value="0">0</button>
-            <button class="key__btn" data-key="fractional" value=".">,</button>
-            <button class="key__btn" data-key="round" value="=">=</button>
+            <button class="key__btn" data-key="fractional" value="."><span class="btn__round">,</span></button>
+            <button class="key__btn" data-key="round" value="="><span class="btn__round">=</span></button>
         </div>
     </div>
     <script src="js/main.min.js"></script>
+    <script>
+        $('.fraction').each(function(key, value) {
+    $this = $(this)
+    var split = $this.html().split("/")
+    if( split.length == 2 ){
+        $this.html('<span class="top">'+split[0]+'</span><span class="bottom">'+split[1]+'</span>')
+    }    
+});
+    </script>
 </body>
 </html>

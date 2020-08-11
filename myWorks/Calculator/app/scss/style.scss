@@ -99,13 +99,25 @@ p{
         height: 80px;
         font-size: 25px;
         border: 1px solid #0000004f;
+        text-align: center;    
         outline:none;
-        // &:hover{
-        //     transition: 0.5s;
-        //     transition-delay: 0.3s;
-        //     background-color: rgba(48, 68, 241, 0.349);
-        // }
+        &:hover{
+            background-color: #bab9b9;
+        }
     }
+}
+.btn__round{
+    font-size: 40px;
+}
+.fraction {
+    display: inline-block;
+    text-align: center;    
+}
+.bottom{
+    border-top: 1px solid #000;
+    display: block;
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 
