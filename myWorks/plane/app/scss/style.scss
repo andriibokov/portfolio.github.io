@@ -1,0 +1,238 @@
+@import"../../node_modules/normalize.css/normalize";
+@import"../../node_modules/slick-carousel/slick/slick";
+@import"./fonts";
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    color: #000;
+    font-size: 18px;
+    font-weight: 21px;
+    margin: 0;
+    min-height: 100vh;
+    @extend %Mono-Light;
+    line-height: 25px;
+    //отмена выделения текста на странице
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none
+}
+ul{
+    margin-left: 0;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;padding: 0;
+}
+section{
+    padding-bottom: 10px;
+}
+.display__none{
+    display: none;
+}
+.header{
+    width: 100%;
+    min-height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(222, 184, 135, 0.555);
+}
+.menu{
+    width: 1250px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 10px 0;
+    &__box{
+        padding: 0 10px;
+    }
+    &__img{
+        width: 50px;
+        height: 50px;
+    }
+    &__link{
+        align-items: center;
+        display: flex;
+    }
+    &__title{
+        @extend %Mono-Bold;
+        padding: 0 20px;
+    }
+}
+@keyframes rt {
+    from {
+        top: -10px;
+        left: -250px;}
+    to {
+        top: 0px;
+        left: 0px;}
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: rt 5s;
+    position: relative;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.menu__link:hover .menu__img{
+    animation: spin 3s linear;
+    animation-iteration-count: 5s;
+}   
+main{
+    width: 100%;
+    background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+.conteiner{
+    width: 1250px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 0 0 0;
+}
+.carousel{
+    &__img{
+        height: 100vh;
+        margin: 0 auto;
+    }
+}
+.slick{
+    &-arrow{
+        position: absolute;
+        margin: 0 20px;
+        display:inline-block;
+        width:40px;
+        height:40px;
+        fill:rgba(126, 123, 123, 0.288);
+        cursor:pointer;
+        &:hover{
+            fill:#414040;
+            & path{
+                stroke:#fff;
+            }
+        }
+        & path{
+            stroke-width:2;
+            fill:none;
+            stroke: #0f0f0f;
+            stroke-linecap:round;
+        }
+    }
+    &-next{
+        right: 0;
+        top: 50%;
+    }
+    &-prev{
+        left: 0;
+        top: 50%;
+        z-index: 1;
+    }
+}
+.container{
+    width: 1250px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.box__left{
+    width: 700px;
+    margin: 100px 10px;
+    position: relative;
+}
+.touch{
+    &__img{
+        width: 100%;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
+    }
+    &__text{
+        font-size: 14px;
+    }
+    &__box{
+        position: absolute;
+        cursor: pointer;
+    }
+}
+.touch__box{
+    background: rgba(0, 0, 0, 0.192);
+    padding: 5px;
+    border-radius: 20px;
+}
+.box{
+    &1{
+        top: 166px;
+        left: 251px;
+    }
+    &2{
+        top: 131px;
+        left: 159px;    
+    }
+    &3{
+        top: 350px;
+        left: 446px;
+    }
+    &4{
+        top: 210px;
+        left: 188px;    
+    }
+    &5{
+        top: 100px;
+        left: 525px;
+    }
+}
+.box__right{
+    width: 40%;
+    margin: 100px 5px;
+    padding: 5px;
+}
+.specifications{
+    &__item{
+        padding: 5px 0;
+    }
+    &__title{
+        cursor: pointer;
+        display: flex;
+        padding: 5px;
+        margin: 0;
+        background: linear-gradient(to bottom, #bdc3c798, #2c3e5080);
+        border-radius: 5px 5px 0 0;
+    }
+}
+.item{
+    &__img{
+        width: 20px;
+        height: 20px;
+    }
+    &__title{
+        @extend %Mono-Regular;
+        margin: 0;
+        padding-left: 10px;
+    }
+    &__text{
+        padding: 10px;
+        border-radius: 0 0  5px 5px;
+        background: linear-gradient(to bottom, #0b486b67, #f561176c);
+    }
+}
+
+
+
+
+// @import"_mobile.scss";

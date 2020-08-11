@@ -1,0 +1,69 @@
+@media (max-width: 680px){
+    .boost__box{
+        width: 100%;
+    }
+    .input__message{
+        width: 280px;
+        font-size: 17px;
+        height: 32px;
+    }
+}
+@media (max-width: 450px){
+    .input__message{
+        width: 220px;
+        font-size: 12px;
+        height: 32px;
+    }
+    .boost__box {
+        height: 31px;
+    }
+    .monitor__box {
+        height: 60px;
+        margin-bottom: 7px;
+    }
+    .monitor__input-mini {
+        height: 26px;
+        font-size: 10px;
+    }
+    .monitor__input {
+        height: 40px;
+        font-size: 35px;
+        letter-spacing: 0px;
+    }
+    .key__btn {
+        height: 55px;
+        font-size: 18px;
+    }
+    .boost__btn {
+        width: 25px;
+        height: 10px;
+    }
+}
+@media (max-width: 395px){
+    .input__message{
+        width: 200px;
+        font-size: 10px;
+        height: 25px;
+    }
+    .boost__btn {
+        width: 20px;
+        height: 8px;
+    }
+    .key__btn {
+        height: 55px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 340px){
+    .boost__btn {
+        width: 17px;
+        height: 7px;
+    }
+    .input__message {
+        width: 193px;
+        height: 25px;
+    }
+    .key__btn {
+        height: 49px;
+    }
+}

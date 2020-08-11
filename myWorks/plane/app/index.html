@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <div class="menu__box-logo">
+                <a href="" class="menu__link-logo">
+                    <img src="./img/logo.png" alt="image logo" class="logo">
+                </a>
+            </div>
+            <div class="menu__box">
+                <a href="" class="menu__link">
+                    <img src="./img/shest.png" alt="" class="menu__img">
+                    <span class="menu__title">Текнические характеристики</span>
+                </a>
+            </div>
+            <div class="menu__box">
+                <a href="" class="menu__link">
+                    <img src="./img/wint.png" alt="" class="menu__img">
+                    <span class="menu__title">Достоинства</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="conteiner">
+                <div class="carousel__box"><img src="./img/1.jpg" alt="" class="carousel__img"></div>
+                <div class="carousel__box"><img src="./img/2.jpg" alt="" class="carousel__img"></div>
+                <div class="carousel__box"><img src="./img/3.jpg" alt="" class="carousel__img"></div>
+                <div class="carousel__box"><img src="./img/4.jpg" alt="" class="carousel__img"></div>
+                <div class="carousel__box"><img src="./img/5.jpg" alt="" class="carousel__img"></div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="box__left">
+                    <img src="./img/2.jpg" alt="" class="touch__img">
+                    <div class="touch__box box1">
+                        <p class="touch__text">
+                            Скорость
+                        </p>
+                    </div>
+                    <div class="touch__box box2">
+                        <p class="touch__text">
+                            Вес
+                        </p>
+                    </div>
+                    <div class="touch__box box3">
+                        <p class="touch__text">
+                            Длина
+                        </p>
+                    </div>
+                    <div class="touch__box box4">
+                        <p class="touch__text">
+                            Аккумулятор
+                        </p>
+                    </div>
+                    <div class="touch__box box5">
+                        <p class="touch__text">
+                            Время заряда
+                        </p>
+                    </div>
+                </div>
+                <div class="box__right">
+                    <ul id="specifications" class="specifications__list">
+                        <li class="specifications__item">
+                            <div class="specifications__title">
+                                <img src="./img/barometer.png" alt="" class="item__img">
+                                <h3 class="item__title">Скорость</h3>
+                            </div>
+                            <div class="item__text display__none">Максимальная скорость - 5 км/час</div>
+                        </li>
+                        <li class="specifications__item">
+                            <div class="specifications__title">
+                                <img src="./img/weight.png" alt="" class="item__img">
+                                <h3 class="item__title">Вес</h3>
+                            </div>
+                            <div class="item__text display__none">Вес - 16 грамм</div>
+                        </li>
+                        <li class="specifications__item">
+                            <div class="specifications__title">
+                                <img src="./img/size.png" alt="" class="item__img">
+                                <h3 class="item__title">Габариты</h3>
+                            </div>
+                            <div class="item__text display__none">Длина - 20 см; Ширина - 15 см</div>
+                        </li>
+                        <li class="specifications__item">
+                            <div class="specifications__title">
+                                <img src="./img/battery.png" alt="" class="item__img">
+                                <h3 class="item__title">Аккумулятор</h3>
+                            </div>
+                            <div class="item__text display__none">Время работы без подзарядки - 15 - 20 запусков</div>
+                        </li>
+                        <li class="specifications__item">
+                            <div class="specifications__title">
+                                <img src="./img/charging-battery.png" alt="" class="item__img">
+                                <h3 class="item__title">Время заправки</h3>
+                            </div>
+                            <div class="item__text display__none">Время зарядки 20 - 30 минут</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="footer__menu">
+            <ul>
+                <li class="menu__item">
+                    <a href="" class="menu__link">
+                        <p class="menu__text">Где купить?</p>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__link">
+                        <p class="menu__text"></p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <span class="copy">@BokovAndrey 2020</span>
+    </footer> 
+    <script src="js/main.min.js"></script>
+    <script>
+        // let specific = document.querySelector('#specifications')
+        specifications.onclick = function(event){
+            event.preventDefault();
+            let specification = event.target;
+            if(specification.classList.contains('item__text')) return;
+            let lastChild = specification.closest('.specifications__title').nextElementSibling ;
+            if(lastChild.classList.contains('display__none')){
+                lastChild.classList.remove('display__none');
+            } else {
+                lastChild.classList.add('display__none');
+            }
+        }
+    </script>  
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+
+@media (max-width: 1100px){
+    .portfolic__item-img{
+        transition: 1s;
+        width: 300px;;
+    }
+}
+
+@media (max-width: 970px){
+    .portfolic__item-img{
+        width: 250px;
+    }
+}
+
+@media (max-width: 860px){
+    .logo__phone{
+        display: none;
+    }
+    .portfolic__carousel{
+        transition: 1s;
+        flex-wrap: wrap;
+    }
+    .portfolic__list{
+        padding: 0 10px;
+    }
+    .portfolic__item-img{
+        width: 350px;
+    }
+}
+@media (max-width: 970px){
+    .portfolic__item-img{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 660px){
+    .logo{
+        display: none;
+    }
+    .menu{
+        float: none;
+        &__link span{
+            transition: 1s;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+    .flip__menu__img-front,.flip__menu__container{
+        width: 30px;
+        height: 30px;
+    }
+    .container__menu{
+        height: 60px;
+    }
+    .contacts__link p{
+        transition: 1s;
+        font-size: 14px;
+    }
+    .flip__container, .flip__img-front{
+        width: 40px;
+        height: 40px;
+    }
+    .footer{
+        height: 120px;
+        &__copy{
+            font-size: 12px;
+        }
+        &__container{
+            margin-bottom: 12px;
+        }
+    }
+}
+@media (max-width: 530px){
+    .contacts__link p{
+        transition: 1s;
+        font-size: 12px;
+    }
+    .flip__container, .flip__img-front{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    .menu__item{
+        margin: 0;
+    }
+    .menu__link{
+        margin: 5px 10px;
+    }
+    body{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .contacts__link p{
+        transition: 1s;
+        display: none;
+    }
+    .footer{
+        height: 90px;
+    }
+}
