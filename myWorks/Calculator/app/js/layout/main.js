@@ -1,3 +1,4 @@
+//функционал калькулятора
 document.addEventListener("touchstart", function(){}, true);
 const body = document.querySelector("body");
 const boxKey = document.querySelector(".key__box");
@@ -249,3 +250,16 @@ function pushSymbolThree(ImportOf, ImportIn, clickElem){
 function pushSymbolThreePlus(ImportOf, ImportIn, clickElem){
     ImportOf.value += ImportIn.value + clickElem.value;
 }
+
+//дробь 1/х
+$('.fraction').each(function(key, value) {
+    $this = $(this)
+    var split = $this.html().split("/")
+    if( split.length == 2 ){
+        $this.html('<span class="top">'+split[0]+'</span><span class="bottom">'+split[1]+'</span>')
+    }    
+});
+
+//отключение hover на устройствах с ontouchstart
+var isTouch = 'ontouchstart' in window;
+document.documentElement.className += isTouch?' touch ':' no-touch ';
