@@ -17,6 +17,12 @@
     .logo__phone{
         display: none;
     }
+    .history{
+        width: 100%;
+        &__item-img{
+        display: none;
+        }
+    }
     .portfolic__carousel{
         transition: 1s;
         flex-wrap: wrap;

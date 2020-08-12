@@ -85,10 +85,11 @@ p{
     background-color: #dcd9d9;
     padding-top: 76px;
     padding-bottom: 30px;
-    height: 100vh;
+    height: max-content;
 }
 .history{
     width: 50%;
+    margin-left: 10px;
     &__container{
         max-width: 1250px;
         margin: 0 auto;
