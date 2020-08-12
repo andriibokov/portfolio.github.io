@@ -38,7 +38,7 @@ p{
 .container{
     margin: 10px auto;
     max-width: 650px;
-    max-height: 650px;
+    max-height: max-content;
     padding: 10px;
     background-color: #0000004f;
 }
@@ -69,21 +69,41 @@ p{
 }
 .boost{
     &__box{
-        height: 40px;
+        height: max-content;
+        padding: 5px;
     }
     &__btn{
-        width: 30px;
-        height: 10px;
+        width: 40px;
+        height: 20px;
+        font-size: 15px;
     }
+}
+.box__btn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.m__input{
+    position: absolute;
+    top: -28px;
+    right: -5px;
+    text-align: right;
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+
 }
 .input__message{
     background-color: #999898;
-    float: right;
+    display: block;
     width: 450px;
     border: none;
     outline:none;
     color: #790b0b;
-    text-align: end;
+}
+.m__input{
+    visibility: hidden;
 }
 .key{
     &__box{

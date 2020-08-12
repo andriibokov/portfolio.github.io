@@ -13,37 +13,42 @@
             <input class="monitor__input" type="text" name="monitor" placeholder="0" readonly>
         </div>
         <div class="boost__box">
-            <button class="boost__btn"></button>
-            <button class="boost__btn"></button>
-            <button class="boost__btn"></button>
-            <button class="boost__btn"></button>
             <input class="input__message" type="text" name="monitor" readonly>
+            <div class="box__btn">
+                <button class="boost__btn btn__click" data-key="Memory" value="Delete">MC</button>
+                <button class="boost__btn btn__click" data-key="Memory" value="Display">MR</button>
+                <button class="boost__btn btn__click" data-key="Memory" value="+">M+</button>
+                <button class="boost__btn btn__click" data-key="Memory" value="-">M-</button>
+                <button class="boost__btn btn__click" data-key="Memory" value="Renewal">MS</button>
+                <button class="boost__btn btn__click" data-key="Memory" value="Hidden">M</button>
+                <input class="m__input" type="text" name="m" placeholder="0" readonly>
+            </div>
         </div>
         <div class="key__box">
-            <button class="key__btn" data-key="interest" value="%">%</button>
-            <button class="key__btn" data-key="CE" value="CE">CE</button>
-            <button class="key__btn" data-key="C" value="C">C</button>
-            <button class="key__btn" data-key="Delete" value="Delete">Delete</button>
-            <button class="key__btn fraction" data-key="decimal" value="1/x">1/x</button>
-            <button class="key__btn" data-key="pow" value="x2">X<sup><small>2</small></sup></button>
-            <button class="key__btn" data-key="squareRoot" value="squareRoot">&#x221aX</button>
-            <button class="key__btn" data-key="round" value="/"><span>&#247</span></button>
-            <button class="key__btn" data-key="number" value="7">7</button>
-            <button class="key__btn" data-key="number" value="8">8</button>
-            <button class="key__btn" data-key="number" value="9">9</button>
-            <button class="key__btn" data-key="round" value="*"><span>&#215</span></button>
-            <button class="key__btn" data-key="number" value="4">4</button>
-            <button class="key__btn" data-key="number" value="5">5</button>
-            <button class="key__btn" data-key="number" value="6">6</button>
-            <button class="key__btn" data-key="round" value="-"><span>-</span></button>
-            <button class="key__btn" data-key="number" value="1">1</button>
-            <button class="key__btn" data-key="number" value="2">2</button>
-            <button class="key__btn" data-key="number" value="3">3</button>
-            <button class="key__btn" data-key="round" value="+"><span>+</span></button>
-            <button class="key__btn" data-key="minus" value=" -"><span>&#177</span></button>
-            <button class="key__btn" data-key="number" value="0">0</button>
-            <button class="key__btn" data-key="fractional" value="."><span>,</span></button>
-            <button class="key__btn" data-key="round" value="="><span>=</span></button>
+            <button class="key__btn btn__click" data-key="interest" value="%">%</button>
+            <button class="key__btn btn__click" data-key="CE" value="CE">CE</button>
+            <button class="key__btn btn__click" data-key="C" value="C">C</button>
+            <button class="key__btn btn__click" data-key="Delete" value="Delete">Delete</button>
+            <button class="key__btn btn__click fraction" data-key="decimal" value="1/x">1/x</button>
+            <button class="key__btn btn__click" data-key="pow" value="x2">X<sup><small>2</small></sup></button>
+            <button class="key__btn btn__click" data-key="squareRoot" value="squareRoot">&#x221aX</button>
+            <button class="key__btn btn__click" data-key="round" value="/"><span>&#247</span></button>
+            <button class="key__btn btn__click" data-key="number" value="7">7</button>
+            <button class="key__btn btn__click" data-key="number" value="8">8</button>
+            <button class="key__btn btn__click" data-key="number" value="9">9</button>
+            <button class="key__btn btn__click" data-key="round" value="*"><span>&#215</span></button>
+            <button class="key__btn btn__click" data-key="number" value="4">4</button>
+            <button class="key__btn btn__click" data-key="number" value="5">5</button>
+            <button class="key__btn btn__click" data-key="number" value="6">6</button>
+            <button class="key__btn btn__click" data-key="round" value="-"><span>-</span></button>
+            <button class="key__btn btn__click" data-key="number" value="1">1</button>
+            <button class="key__btn btn__click" data-key="number" value="2">2</button>
+            <button class="key__btn btn__click" data-key="number" value="3">3</button>
+            <button class="key__btn btn__click" data-key="round" value="+"><span>+</span></button>
+            <button class="key__btn btn__click" data-key="minus" value=" -"><span>&#177</span></button>
+            <button class="key__btn btn__click" data-key="number" value="0">0</button>
+            <button class="key__btn btn__click" data-key="fractional" value="."><span>,</span></button>
+            <button class="key__btn btn__click" data-key="round" value="="><span>=</span></button>
         </div>
     </div>
     <script src="js/main.min.js"></script>
@@ -52,16 +57,19 @@
 document.addEventListener("touchstart", function(){}, true);
 const body = document.querySelector("body");
 const boxKey = document.querySelector(".key__box");
+const boxBoost = document.querySelector(".boost__box");
 const monitorInput = document.querySelector(".monitor__input");
 const monitorInputMini = document.querySelector(".monitor__input-mini");
+const monitorMemory = document.querySelector(".m__input")
 const inputMessage = document.querySelector(".input__message");
 const btn = document.querySelectorAll(".key__btn");
 let checkBox = false;
 let message = "";
-boxKey.onmousedown = body.onkeydown = pressing;
+boxBoost.onmousedown = boxKey.onmousedown = body.onkeydown = pressing;
 function pressing (event){
     let checkBoxDelete = false;
-    let clickElement = event.target.closest('.key__btn');
+    let clickElement = event.target.closest('.btn__click');
+    if(clickElement === null) return;
     if(event.key === "1" || event.key === undefined || event.key === "1" || event.key === "3" || event.key === "4" || event.key === "5" || event.key === "6" || event.key === "7" || event.key === "8" || event.key === "9" || event.key === "0" || event.key === "-" || event.key === "+" || event.key === "=" || event.key === "." || event.key === "/" || event.key === "*" || event.key === "Enter" || event.key === "Backspace" || event.key === "Delete"){
         if(event.code !== undefined){
             for (const elem of btn) {
@@ -199,6 +207,42 @@ function pressing (event){
         }
         if(dataKey === "interest"){
             mathInterest(monitorInputMini, monitorInput);
+        }
+        if(dataKey === "Memory"){
+            if(elemeValue === "Delete"){
+                removeValue(monitorMemory);
+            } else if(elemeValue === "Display"){
+                monitorInput.value = monitorMemory.value;
+            } else if(elemeValue === "Hidden"){
+                    let a = getComputedStyle(monitorMemory).visibility;
+                    if(a ==="hidden"){
+                        monitorMemory.style.visibility = "visible";
+                    } else if(a === "visible"){
+                        monitorMemory.style.visibility = "hidden";
+                    }
+            }  else if(monitorInput.value !== ""){
+                if(elemeValue === "+"){
+                    if(monitorMemory.value === "" || monitorMemory.value === "0"){
+                        pushValue(monitorMemory, monitorInput);  
+                    }else{
+                        monitorMemory.value += clickElement.value + monitorInput.value;
+                    }
+                    roundValue(monitorMemory, monitorMemory)
+                    removeValue(monitorInput)
+                } else if(elemeValue === "-"){
+                    if(monitorMemory.value === "" || monitorMemory.value === "0"){
+                        pushValue(monitorMemory, monitorInput);  
+                    }else{
+                        monitorMemory.value += clickElement.value + monitorInput.value;
+                    }
+                    roundValue(monitorMemory, monitorMemory)
+                    removeValue(monitorInput)
+                } else if(elemeValue === "Renewal"){
+                    monitorMemory.value = monitorInput.value;
+                    removeValue(monitorInput)
+                } 
+            }
+            
         }
         clickElement.blur();
     } else return;
