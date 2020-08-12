@@ -1,3 +1,4 @@
+document.addEventListener("touchstart", function(){}, true);
 const body = document.querySelector("body");
 const boxKey = document.querySelector(".key__box");
 const monitorInput = document.querySelector(".monitor__input");
