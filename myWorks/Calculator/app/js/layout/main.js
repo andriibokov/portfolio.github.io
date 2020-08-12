@@ -148,7 +148,7 @@ function pressing (event){
     if(monitorInput.value.length >= 16){
         monitorInput.value = monitorInput.value.slice(0,17);
     }
-    
+    clickElement.blur();
 }
 
 function mathInterest(ImportOf, ImportIn){
