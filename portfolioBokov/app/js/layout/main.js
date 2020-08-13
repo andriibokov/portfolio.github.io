@@ -61,3 +61,9 @@ function scroll(Box){
         behavior: 'smooth'   //плавный скролл
     });
 };
+
+// Расчёт возраста
+let birth = new Date('02/01/1990');
+let check = new Date();
+let ageInYears =  Math.floor(((check - birth) / (1000 * 60 * 60 * 24)) / 365 );
+document.querySelector(".history__age").innerHTML = `(${ageInYears} лет).`;

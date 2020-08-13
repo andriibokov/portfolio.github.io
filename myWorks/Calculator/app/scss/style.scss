@@ -16,6 +16,9 @@ body{
     @extend %Mono-Light;
     line-height: 25px;
     background-color: rgba(141, 135, 135, 0.288);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0 0;
 }
 a{
     text-decoration: none;
@@ -36,7 +39,6 @@ p{
     display: none;
 }
 .container{
-    margin: 10px auto;
     max-width: 650px;
     max-height: max-content;
     padding: 10px;
@@ -76,12 +78,16 @@ p{
         width: 40px;
         height: 20px;
         font-size: 15px;
+        margin-right: 2px;
+        border: none;
+        outline:none;
+        background-color: #999898;
     }
 }
 .box__btn{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-top: 5px;
 }
 .m__input{
@@ -124,9 +130,13 @@ p{
     }
 }
 .no-touch {
-    .key__btn:hover {
+    .key__btn:hover, .key__btn:active, .key__btn:visited {
         background-color: #bab9b9;
     }
+    .boost__btn:hover, .boost__btn:active, .boost__btn:visited {
+        background-color: #efefef;
+    }
+    
 }
 .fraction {
     display: inline-block;

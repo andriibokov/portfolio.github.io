@@ -100,12 +100,6 @@ main{
     width: 100%;
     background: linear-gradient(to bottom, #0575e6, #021b79);
 }
-.conteiner{
-    width: 1250px;
-    margin: 0 auto;
-    height: 100vh;
-    padding: 0 0 0 0;
-}
 .carousel{
     &__img{
         height: 100vh;
@@ -150,6 +144,12 @@ main{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    &__slick{
+        width: 1250px;
+        height: 100vh;
+        padding: 0;
+        margin: 0 auto;
+    }
 }
 .box__left{
     width: 700px;
@@ -230,6 +230,20 @@ main{
         border-radius: 0 0  5px 5px;
         background: linear-gradient(to bottom, #0b486b67, #f561176c);
     }
+}
+.footer{
+    width: 100%;
+    background-color: rgb(37, 34, 70);
+}
+.copy{
+    width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+
 }
 
 

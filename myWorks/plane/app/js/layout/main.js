@@ -21,7 +21,7 @@
 // };
 //настройка  slick
 $(document).ready(function(){
-    $('.conteiner').slick({
+    $('.container__slick').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -33,31 +33,32 @@ $(document).ready(function(){
     });
 });
 
-//Плавный склолл для меню
-// menu.onclick = function(event){
-//     event.preventDefault();
-//     let elem = event.target;
-//     let link = elem.closest(".menu__link");
-//     let coord,topBox,Box;
+// Плавный склолл для меню
+const menu = document.querySelector(".menu");
+menu.onclick = function(event){
+    event.preventDefault();
+    let elem = event.target;
+    let link = elem.closest(".menu__link");
+    let coord,topBox,Box;
 
-//     if(link.getAttribute("href") == "#history"){
-//         Box = document.querySelector("#history");
-//         scroll(Box);
-//     };
-//     if(link.getAttribute("href") == "#portfoliс"){
-//         Box = document.querySelector("#portfolic");
-//         scroll(Box);
-//     };
-//     if(link.getAttribute("href") == "#footer"){
-//         Box = document.querySelector("#footer");
-//         scroll(Box);
-//     };
-// };
-// function scroll(Box){
-//     coord = Box.getBoundingClientRect();
-//     topBox =coord.top;
-//     return window.scrollBy({
-//         top: topBox,
-//         behavior: 'smooth'   //плавный скролл
-//     });
-// };
+    if(link.getAttribute("href") == "#specific"){
+        Box = document.querySelector("#specific");
+        scroll(Box);
+    };
+    if(link.getAttribute("href") == "#portfoliс"){
+        Box = document.querySelector("#portfolic");
+        scroll(Box);
+    };
+    if(link.getAttribute("href") == "#dignity"){
+        Box = document.querySelector("#dignity");
+        scroll(Box);
+    };
+};
+function scroll(Box){
+    coord = Box.getBoundingClientRect();
+    topBox =coord.top;
+    return window.scrollBy({
+        top: topBox,
+        behavior: 'smooth'   //плавный скролл
+    });
+};

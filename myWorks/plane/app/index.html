@@ -10,18 +10,18 @@
     <header class="header">
         <nav class="menu">
             <div class="menu__box-logo">
-                <a href="" class="menu__link-logo">
+                <a href="#carousel" class="menu__link">
                     <img src="./img/logo.png" alt="image logo" class="logo">
                 </a>
             </div>
             <div class="menu__box">
-                <a href="" class="menu__link">
+                <a href="#specific" class="menu__link">
                     <img src="./img/shest.png" alt="" class="menu__img">
                     <span class="menu__title">Текнические характеристики</span>
                 </a>
             </div>
             <div class="menu__box">
-                <a href="" class="menu__link">
+                <a href="#dignity" class="menu__link">
                     <img src="./img/wint.png" alt="" class="menu__img">
                     <span class="menu__title">Достоинства</span>
                 </a>
@@ -29,8 +29,8 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div class="conteiner">
+        <section id="carousel">
+            <div class="container__slick">
                 <div class="carousel__box"><img src="./img/1.jpg" alt="" class="carousel__img"></div>
                 <div class="carousel__box"><img src="./img/2.jpg" alt="" class="carousel__img"></div>
                 <div class="carousel__box"><img src="./img/3.jpg" alt="" class="carousel__img"></div>
@@ -38,7 +38,7 @@
                 <div class="carousel__box"><img src="./img/5.jpg" alt="" class="carousel__img"></div>
             </div>
         </section>
-        <section>
+        <section id="specific">
             <div class="container">
                 <div class="box__left">
                     <img src="./img/2.jpg" alt="" class="touch__img">
@@ -109,6 +109,10 @@
                 </div>
             </div>
         </section>
+        <section id="dignity">
+            <div class="container">
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <nav class="footer__menu">
@@ -129,18 +133,6 @@
     </footer> 
     <script src="js/main.min.js"></script>
     <script>
-        // let specific = document.querySelector('#specifications')
-        specifications.onclick = function(event){
-            event.preventDefault();
-            let specification = event.target;
-            if(specification.classList.contains('item__text')) return;
-            let lastChild = specification.closest('.specifications__title').nextElementSibling ;
-            if(lastChild.classList.contains('display__none')){
-                lastChild.classList.remove('display__none');
-            } else {
-                lastChild.classList.add('display__none');
-            }
-        }
     </script>  
 </body>
 </html>

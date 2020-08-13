@@ -88,8 +88,10 @@ p{
     height: max-content;
 }
 .history{
-    width: 50%;
-    margin-left: 10px;
+    &__left{
+        margin-left: 10px;
+        width: 50%;
+    }
     &__container{
         max-width: 1250px;
         margin: 0 auto;
@@ -102,10 +104,8 @@ p{
         margin: 60px;
         font-size: 22px;
     }
-    &__item-img{
-        float: right;;
-        width: 50%;
-        margin: 20px;
+    &__right{
+
     }
 }
 #portfolic{
@@ -134,7 +134,7 @@ p{
         @extend %Mono-Bold;
     }
     &__list{
-        & span{
+        & a{
             display: block;
             text-align: center;
         }

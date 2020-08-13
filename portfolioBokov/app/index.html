@@ -50,14 +50,14 @@
     <main>
         <section id="history">
             <div class="history__container">
-                <div class="history">
+                <div class="history__left">
                     <ul id="histori__list">
                         <li class="history__item-my">
                             <h3 class="mono_regular">Информация обо мне</h3>
                             <ul>
                                 <li>ФИО: Боков Андрей Геннадиевич.</li>
-                                <li>Дата рождения: 10 февраля 1990 года.</li>
-                                <li>Семейное положение: женат, есть ребёнок.</li>
+                                <li>Дата рождения: 10 февраля 1990 года <span class="history__age"></span></li>
+                                <li>Семейное положение: женат.</li>
                                 <li>
                                     <h4>Положительный качества:</h4>
                                     <ul>
@@ -73,24 +73,58 @@
                         <li class="history__item">
                             <h3 class="mono_regular">Образование</h3>
                             <ul>
-                                <li>Среднее образование: ЗОШ№1 г.Середина-Буда</li>
-                                <li>Высшее образование: ХНУРЭ</li>
+                                <ul>
+                                    <h4>Среднее образование:</h4>
+                                    <li>1997-2008 г.Середина-Буда ЗОШ№1.</li>
+                                </ul>
+                                <ul>
+                                    <h4>Высшее образование:</h4>
+                                    <li>2008-2013 Специалист г.Харьков ХНУРЭ Специальность: Метрология, стандартизация и сертификация. </li>
+                                </ul>
                             </ul>
                         </li>
                         <li class="history__item">
-                            <h3 class="mono_regular">Места работы</h3>
+                            <h3 class="mono_regular">Опыт работы</h3>
                             <ul>
                                 <li>
-                                    Оператор Call-Center магазин MotoStyle г.Харьков
+                                    2014-2017 г.Харьков Оператор Call-Center магазин MotoStyle.
                                 </li>
                                 <li>
-                                    Монтер металических конструкций и труб Польша г Гданск
+                                    2018-2019 Польша г.Гданск Монтер металических конструкций и труб.
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <img class="history__item-img" src="page/myhistory.png" alt="Фото моя история">
+                <div class="history__right">
+                    <ul>
+                        <li class="history__item">
+                            <h3 class="mono_regular">Навыки:</h3>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SCSS</li>
+                                <li>JS</li>
+                                <li>jQuery</li>
+                                <li>Vue</li>
+                                <li>Gulp</li>
+                                <li>Git</li>
+                                <li>VS Code</li>
+                                <li>Gimp</li>
+                                <li>Figma</li>
+                            </ul>
+                        </li>
+                        <li class="history__item">
+                            <h3 class="mono_regular">Знание языков:</h3>
+                            <ul>
+                                <li>Английский — начинающий</li>
+                                <li>Русский — свободно</li>
+                                <li>Украинский — свободно</li>
+                                <li>Польский — начинающий</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="portfolic">
@@ -118,7 +152,7 @@
                                 <img class="portfolic__list-img" src="page/Calculator/Calculator4.jpg" alt="">
                             </div>
                         </div>
-                        <span>Calculator</span>
+                        <a href="https://andriibokov.github.io/myWorks/Calculator/app/" target="_blank">Calculator</a>
                     </li>
                     <li class="portfolic__list">
                         <div class="portfolic__item">
@@ -141,7 +175,7 @@
                                 <img class="portfolic__list-img" src="page/velo-sity/scrin5.jpg" alt="">
                             </div>
                         </div>
-                        <span>Интернет-магазин</span>
+                        <a href="https://andriibokov.github.io/myWorks/plane/app/" target="_blank">plane</a>
                     </li>
                     <li class="portfolic__list">
                         <div class="portfolic__item">
@@ -164,7 +198,7 @@
                                 <img class="portfolic__list-img" src="page/velo-sity/scrin5.jpg" alt="">
                             </div>
                         </div>
-                        <span>Интернет-магазин</span>
+                        <a href="https://andriibokov.github.io/myWorks/Calculator/app/" target="_blank">Calculator</a>
                     </li>
                 </ul>
             </div>
@@ -201,6 +235,7 @@
     </footer> 
     <script src="js/main.min.js"></script>
     <script>
+
     </script>  
 </body>
 </html>

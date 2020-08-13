@@ -1,6 +1,9 @@
 @media (max-width: 680px){
-    .key__btn:hover{
+    .key__btn:hover, .key__btn:active, .key__btn:visited, .boost__btn:hover, .boost__btn:active, .boost__btn:visited {
         background-color:none !important;
+    }
+    .boost__btn{
+        background-color: #efefef;
     }
     .boost__box{
         width: 100%;
