@@ -133,6 +133,12 @@
     </footer> 
     <script src="js/main.min.js"></script>
     <script>
+        specific.onclick = function(event){
+            let elem = event.target;
+            if(!elem.closest('.specifications__title')) return;
+            let nextElem =  elem.closest('.specifications__title').nextElementSibling;
+            nextElem.classList.toggle("display__none");
+        }
     </script>  
 </body>
 </html>

@@ -51,7 +51,7 @@ section{
     background-color: rgba(222, 184, 135, 0.555);
 }
 .menu{
-    width: 1250px;
+    max-width: 1250px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -102,8 +102,11 @@ main{
 }
 .carousel{
     &__img{
-        height: 100vh;
         margin: 0 auto;
+        width: 100%;
+    }
+    &__box{
+        max-width: 1250px;
     }
 }
 .slick{
@@ -139,13 +142,13 @@ main{
     }
 }
 .container{
-    width: 1250px;
+    max-width: 1250px;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     &__slick{
-        width: 1250px;
+        max-width: 1250px;
         height: 100vh;
         padding: 0;
         margin: 0 auto;
@@ -236,7 +239,7 @@ main{
     background-color: rgb(37, 34, 70);
 }
 .copy{
-    width: 1250px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 0 20px;
     border-top: 1px solid #000;
@@ -249,4 +252,4 @@ main{
 
 
 
-// @import"_mobile.scss";
+@import"_mobile.scss";
