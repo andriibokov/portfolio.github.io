@@ -11,8 +11,16 @@
     .container{
         height: max-content;
     }
-    .carousel__box{
+    .dignity__list{
         padding: 10px;
+    }
+    .carousel{
+        &__box{
+            padding: 10px;
+        }
+        &__img{
+            height: auto;
+        }
     }
     .box__left{
         display: none;
@@ -33,6 +41,7 @@
     .logo{
         width: 30px;
         height: 30px;
+        margin: 0 10px;
     }
     .menu__img{
         width: 30px;
@@ -48,4 +57,16 @@
     .slick-arrow{
         display: none;
     }
+}
+@media (max-width: 450px){
+    .menu__title{
+        display: none;
+    }
+    .dignity__text, .menu__text{
+        font-size: 18px;
+    }
+    .dignity__icon, .footer__icon{
+        height: 25px;
+    }
+
 }
