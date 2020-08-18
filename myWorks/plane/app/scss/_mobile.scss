@@ -8,6 +8,9 @@
 }
 
 @media (max-width: 850px){
+    .slick-arrow{
+        display: none;
+    }
     .container{
         height: max-content;
     }
