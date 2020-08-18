@@ -15,7 +15,7 @@
         height: max-content;
     }
     .dignity__list{
-        padding: 10px;
+        padding: 50px 10px 10px 10px;
     }
     .carousel{
         &__box{
@@ -28,15 +28,13 @@
     .box__left{
         display: none;
     }
-    .box__right{
-        width: 100%;
-    }
     .box{
         &__left{
             margin: 20px 10px;
         }
         &__right{
-            margin: 20px 10px;
+            margin: 50px 10px 10px 10px;
+            width: 100%;
         }
     }
 }
