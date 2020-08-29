@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Calculator-VueJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <input
+            class="display__input"
+            @keyup.enter="equalInput"
+            type="text"
+            v-model="inputMath"
+            placeholder="0"
+        >
+        <input
+            class="display__input"
+            type="text"
+            v-model="inputResult"
+            placeholder="0"
+            disabled
+        >
+        <div class="box__btn">
+            <button @click="resetInput" class="btn__reset btn">{{reset}}</button>
+            <button
+                @click="pushOperation(operation)"
+                class="btn__operation btn"
+                v-for="operation in operations"
+                :key="operation.id"
+            >{{operation}}</button>
+            <button
+                @click="pushNumber(number)"
+                class="btn__number btn"
+                v-for="number in numbers"
+                :key="number.id"
+            >{{number}}</button>
+            <button @click="equalInput" class="btn__equal btn">{{equal}}</button>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
