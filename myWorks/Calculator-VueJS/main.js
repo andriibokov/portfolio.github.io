@@ -1,10 +1,3 @@
-
-// Vue.component('',{
-//     props: [''],
-//     template:`
-//     `
-// })
-
 var app = new Vue({
     el: '#app',
     data: {
