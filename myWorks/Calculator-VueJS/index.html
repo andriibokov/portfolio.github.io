@@ -23,7 +23,8 @@
             disabled
         >
         <div class="box__btn">
-            <button @click="resetInput" class="btn__reset btn">{{reset}}</button>
+            <button @click="resetInput" class="btn">{{del}}</button>
+            <button @click="deleteInput" class="btn__reset btn">{{reset}}</button>
             <button
                 @click="pushOperation(operation)"
                 class="btn__operation btn"
@@ -36,6 +37,7 @@
                 v-for="number in numbers"
                 :key="number.id"
             >{{number}}</button>
+            <button @click="fractionInput" class="btn">{{fraction}}</button>
             <button @click="equalInput" class="btn__equal btn">{{equal}}</button>
         </div>
     </div>

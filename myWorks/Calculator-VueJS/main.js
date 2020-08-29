@@ -1,30 +1,47 @@
 var app = new Vue({
     el: '#app',
     data: {
-        inputResult:'',
-        inputMath:'',
-        numbers:[1, 2, 3, 4, 5, 6, 7, 8, 9, ".", 0],
-        operations:['%', '/', '+', '-', '*'],
-        reset: "CE",
+        inputResult: '',
+        inputMath: '',
+        numbers:[1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
+        operations:['/', '+', '-', '*'],
+        del: 'C',
+        reset: 'CE',
         equal: "=",
-        checkBox: false
+        fraction: '.',
+        checkBoxOperation: false     
     },
     methods: {
         pushNumber: function (params) {
-            checkBox = false
             this.inputMath += params
+            checkBoxOperation = false
         },
-        pushOperation: function (params) {
-            !checkBox ? this.inputMath += params : false;
-            checkBox = true
+        pushOperation: function(params) {
+            if(!checkBoxOperation){
+                this.inputMath += params;
+                checkBoxOperation = true;
+            } else{
+                this.inputMath = this.inputMath.slice(0, -1);
+                checkBoxOperation = false; 
+            }
+            
+        },
+        fractionInput: function(){
+            this.inputMath === '' ? this.inputMath = '0': false;
+            this.inputMath.slice(-1) === this.fraction ? false : this.inputMath += this.fraction;
+            checkBoxFraction = true
         },
         resetInput: function () {
-            checkBox = false
+            checkBoxOperation = false
             this.inputResult = ""            
             this.inputMath = ""            
         },
+        deleteInput: function(){
+            checkBoxOperation = false 
+            this.inputMath = this.inputMath.slice(0, -1)
+        },
         equalInput: function () {
-            checkBox = false
+            checkBoxOperation = false
             this.inputResult = eval(this.inputMath)
         }
     }
