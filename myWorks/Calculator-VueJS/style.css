@@ -35,13 +35,22 @@ p{
 }
 
 .container{
-    position: relative;
-    max-width: 450px;
-    margin: 20px auto;
-    padding: 5px;
-    color: #35495e;
-    text-align: center;
-    background-color: #35495e;
+  position: relative;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 5px;
+  color: #35495e;
+  text-align: center;
+  background-color: #35495e;
+}
+.box__courses{
+  background-color: #41b883;
+}
+.box__left, .box__right{
+  width: 100%;
+}
+.input__course{
+  width: 100px;
 }
 .display__input{
   display: block;
@@ -52,8 +61,19 @@ p{
   background-color: #35495e;
   color: #dee1e5;
   outline: none;
-  border: none;
   font-size: 25px;
+}
+.input__course,.select__course{
+  text-align: end;
+  margin-bottom: 5px;
+  background-color: #35495e;
+  color: #dee1e5;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+.box__input__result{
+  color: #dee1e5;
 }
 .box__btn{
   display: flex;

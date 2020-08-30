@@ -7,41 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" id="app">
-        <input
-            class="display__input"
-            @keyup.enter="equalInput"
-            type="text"
-            v-model="inputMath"
-            placeholder="0"
-        >
-        <input
-            class="display__input"
-            type="text"
-            v-model="inputResult"
-            placeholder="0"
-            disabled
-        >
-        <div class="box__btn">
-            <button @click="resetInput" class="btn">{{del}}</button>
-            <button @click="deleteInput" class="btn__reset btn">{{reset}}</button>
-            <button
-                @click="pushOperation(operation)"
-                class="btn__operation btn"
-                v-for="operation in operations"
-                :key="operation.id"
-            >{{operation}}</button>
-            <button
-                @click="pushNumber(number)"
-                class="btn__number btn"
-                v-for="number in numbers"
-                :key="number.id"
-            >{{number}}</button>
-            <button @click="fractionInput" class="btn">{{fraction}}</button>
-            <button @click="equalInput" class="btn__equal btn">{{equal}}</button>
+    <div id="app">
+        <div class="container">
+            <input
+                class="display__input"
+                @keyup.enter="equalInput"
+                type="text"
+                v-model="inputMath"
+                placeholder="0"
+            >
+            <input
+                class="display__input"
+                type="text"
+                v-model="inputResult"
+                placeholder="0"
+                disabled
+            >
+            <div class="box__btn">
+                <button @click="resetInput" class="btn">{{del}}</button>
+                <button @click="deleteInput" class="btn__reset btn">{{reset}}</button>
+                <button
+                    @click="pushOperation(operation)"
+                    class="btn__operation btn"
+                    v-for="operation in operations"
+                    :key="operation.id"
+                >{{operation}}</button>
+                <button
+                    @click="pushNumber(number)"
+                    class="btn__number btn"
+                    v-for="number in numbers"
+                    :key="number.id"
+                >{{number}}</button>
+                <button @click="fractionInput" class="btn">{{fraction}}</button>
+                <button @click="equalInput" class="btn__equal btn">{{equal}}</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box__left">
+                <input 
+                    type="text"
+                    class="input__course"
+                    v-model="inputSelectedBuy"
+                    placeholder="Введите число"
+                >
+                <select class="select__course" v-model="buySelected">
+                    <option disabled value="">Выберите валюту</option>
+                    <option v-for="course in courses" v-bind:value="course.buy">
+                        :{{ course.ccy }}
+                    </option>
+                </select>
+                <div class="">
+                    <span class="box__input__result">UAH:</span>
+                    <span class="box__input__result">{{selectedBuy()}}</span>
+                </div>
+            </div>
+
+
+            <div class="box__right">
+                <select class="select__course" v-model="saleSelected">
+                    <option disabled value="">Выберите валюту</option>
+                    <option v-for="course in courses" v-bind:value="course.sale">
+                        {{ course.ccy }}
+                    </option>
+                </select>
+                <span class="box__input__result">{{selectedSale()}}</span>
+                <span class="box__input__result">UAH:</span>
+                <input 
+                type="text"
+                class="input__course"
+                v-model="inputSelectedSale"
+                placeholder="Введите число"
+                >
+            </div>
         </div>
     </div>
     <script src="./js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
