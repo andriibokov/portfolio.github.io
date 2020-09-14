@@ -12,11 +12,12 @@
                 <button>➕ Создать новую заметку</button>
             </div>
             <ul>
+                <!-- :task-todos="task.todo" -->
                 <task
                     v-for="(task, index) in tasks"
                     :key="task.id"
                     :new-task-text="task.text"
-                    :task-todos="task.todo"
+                    :todos='task.todo'
                     :index="index+1"
                     v-on:remove-task="tasks.splice(index, 1)"
                 ></task>
@@ -50,12 +51,12 @@
             </div>
             </form>
             <ul>
-            <todo
-                v-for="(todo, index) in todos"
-                :key="todo.id"
-                :todo="todo.text"
-                v-on:remove-todo="todos.splice(index, 1)"
-            ></todo>
+                <todo
+                    v-for="(todo, index) in todos"
+                    :key="todo.id"
+                    :todo="todo.text"
+                    v-on:remove-todo="todos.splice(index, 1)"
+                ></todo>
             </ul>
         </div>
     </div>

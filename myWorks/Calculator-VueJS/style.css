@@ -48,9 +48,8 @@ p{
 }
 .box__left, .box__right{
   width: 100%;
-}
-.input__course{
-  width: 100px;
+  display: flex;
+  justify-content: space-around;
 }
 .display__input{
   display: block;
@@ -63,8 +62,14 @@ p{
   outline: none;
   font-size: 25px;
 }
+.input__course { 
+  -moz-appearance: textfield;
+}
+.input__course::-webkit-inner-spin-button { 
+  display: none;
+}
 .input__course,.select__course{
-  text-align: end;
+  text-align: center;
   margin-bottom: 5px;
   background-color: #35495e;
   color: #dee1e5;
@@ -74,6 +79,7 @@ p{
 }
 .box__input__result{
   color: #dee1e5;
+  font-size: 15px;
 }
 .box__btn{
   display: flex;

@@ -45,7 +45,7 @@
         <div class="container">
             <div class="box__left">
                 <input 
-                    type="text"
+                    type="number"
                     class="input__course"
                     v-model="inputSelectedBuy"
                     placeholder="Введите число"
@@ -56,14 +56,19 @@
                         :{{ course.ccy }}
                     </option>
                 </select>
-                <div class="">
-                    <span class="box__input__result">UAH:</span>
-                    <span class="box__input__result">{{selectedBuy()}}</span>
-                </div>
+                <span class="box__input__result">UAH:</span>
+                <span class="box__input__result">{{selectedBuy()}}</span>
             </div>
 
 
             <div class="box__right">
+                <input 
+                type="number"
+                class="input__course"
+                v-model="inputSelectedSale"
+                placeholder="Введите число"
+                >
+                <span class="box__input__result">:UAH</span>
                 <select class="select__course" v-model="saleSelected">
                     <option disabled value="">Выберите валюту</option>
                     <option v-for="course in courses" v-bind:value="course.sale">
@@ -71,13 +76,6 @@
                     </option>
                 </select>
                 <span class="box__input__result">{{selectedSale()}}</span>
-                <span class="box__input__result">UAH:</span>
-                <input 
-                type="text"
-                class="input__course"
-                v-model="inputSelectedSale"
-                placeholder="Введите число"
-                >
             </div>
         </div>
     </div>

@@ -1,0 +1,1026 @@
+@media only screen and (max-width: 1350px) and (orientation: landscape){
+
+    .contact__btn-position {
+        left: 50%;
+        top: 100%;
+    }
+    .container, .header__container{
+        width: 100%;
+    }
+    .container{
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 1350px) and (orientation: portrait){
+    .contact__btn-position {
+        left: 50%;
+        top: 100%;
+    }
+    .container, .header__container{
+        width: 100%;
+    }
+    .container{
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1050px) and (orientation: landscape){
+    body {
+        font-size: 11px;
+    }
+    .newApartment__title {
+        max-width: 400px;
+        font-size: 40px;
+        letter-spacing: 0;
+    }
+    .newApartment__absolute {
+        left: 35px;
+    }
+    .search__container {
+        width: 392px;
+        height: 54px;
+    }
+    .newApartment__contacts{
+        width: 475px;
+        height: 60px;
+    }
+    .newApartment__link{
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+    .newApartment__img{
+        margin: 0 15px;
+    }
+    .box__right{
+        max-width: 325px;
+        min-height: 325px;
+    }
+    .box__result{
+        width: 150px;
+        height: 150px;
+    }
+    .result__number{
+        font-size: 25px;
+        margin-bottom: 6px;
+    }
+    .result__text{
+        font-size: 12px;
+    }
+    .title__text{
+        max-width: 345px;
+        font-size: 28px;
+    }
+    .about__statistic{
+        min-height: 500px;
+    }
+    .scrollDown__text{
+        padding: 10px;
+    }
+    .section__about{
+        padding-bottom: 30px;
+    }
+    .btn__allAppartments{
+        width: 220px;
+    }
+    .appartment__title {
+        font-size: 12px;
+    }
+    .specification__cost{
+        font-size: 16px;
+    }
+    .specification__quantity, .specification__name {
+        font-size: 12px;
+    }
+    .specification__img {
+        width: 13px;
+        height: 14px;
+    }
+    .interpretation__box {
+        width: 29%;
+        height: 300px;
+        padding: 10px;
+    }
+    .container{
+        padding: 20px 5px;
+    }
+    .service__right{
+        padding-right: 0;
+    }
+    .title__text{
+        padding-bottom: 10px;
+    }
+    .section__agents{
+        min-height: 685px;
+    }
+    .contact__btn-text{
+        font-size: 15px;
+    }
+    .contact__btn{
+        width: 250px;
+        height: 65px;
+        margin-left: -125px;
+        margin-top: -70px;
+    }
+    .contact__btn-text{
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+    .contact__text-btn{
+        width: 200px;
+        height: 70px;
+    }
+    .footer__box-title{
+        height: 80px;
+    }
+    .footer__btn{
+        width: 300px;
+        height: 50px;
+    }
+}
+@media only screen and (max-width: 1020px) and (orientation: portrait){
+    body {
+        font-size: 11px;
+    }
+    .newApartment__title {
+        max-width: 400px;
+        font-size: 40px;
+    }
+    .newApartment__absolute {
+        left: 35px;
+    }
+    .search__container {
+        width: 392px;
+        height: 54px;
+    }
+    .newApartment__contacts{
+        width: 475px;
+        height: 60px;
+    }
+    .newApartment__link{
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+    .newApartment__img{
+        margin: 0 15px;
+    }
+    .box__right{
+        max-width: 325px;
+        min-height: 325px;
+    }
+    .box__result{
+        width: 150px;
+        height: 150px;
+    }
+    .result__number{
+        font-size: 25px;
+        margin-bottom: 6px;
+    }
+    .result__text{
+        font-size: 12px;
+    }
+    .title__text{
+        max-width: 345px;
+        font-size: 28px;
+    }
+    .about__statistic{
+        min-height: 500px;
+    }
+    .scrollDown__text{
+        padding: 10px;
+    }
+    .section__about{
+        padding-bottom: 30px;
+    }
+    .btn__allAppartments{
+        width: 220px;
+    }
+    .appartment__title {
+        font-size: 12px;
+    }
+    .specification__cost{
+        font-size: 16px;
+    }
+    .specification__quantity, .specification__name {
+        font-size: 12px;
+    }
+    .specification__img {
+        width: 13px;
+        height: 14px;
+    }
+    .interpretation__box {
+        width: 29%;
+        height: 300px;
+        padding: 10px;
+    }
+    .container{
+        padding: 20px 5px;
+    }
+    .service__right{
+        padding-right: 0;
+    }
+    .title__text{
+        padding-bottom: 10px;
+    }
+    .section__agents{
+        min-height: 685px;
+    }
+    .contact__btn-text{
+        font-size: 15px;
+    }
+    .contact__btn{
+        width: 250px;
+        height: 65px;
+        margin-left: -125px;
+        margin-top: -70px;
+    }
+    .contact__btn-text{
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+    .contact__text-btn{
+        width: 200px;
+        height: 70px;
+    }
+    .footer__box-title{
+        height: 80px;
+    }
+    .footer__btn{
+        width: 300px;
+        height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (orientation: landscape){
+    .newApartment__contacts{
+        width: 200px;
+        height: 70px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .newApartment__link{
+        font-size: 12px;
+    }
+    .newApartment__img{
+        width: 13px;
+    }
+    .header__nav {
+        width: 45%;
+    }
+    .newApartment__absolute{
+        left: 15px;
+        top: 15px;
+        min-height: 150px;
+    }
+    .scrollDown__btn {
+        bottom: 44px;
+        left: -31px;
+    }
+    .newApartment__title{
+        max-width: 300px;
+        font-size: 25px;
+    }
+    .search__container {
+        width: 300px;
+        height: 45px;
+    }
+    .about__statistic{
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+    .box__left{
+        min-height: max-content;
+        max-width: 100%;
+        height: max-content;
+        justify-content: space-evenly;
+    }
+    .box__right{
+        flex-wrap: nowrap;
+        min-width: 100%;
+        min-height: max-content;
+    }
+    .box__result{
+        width: 24%;
+    }
+    .result__number {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    .result__text {
+        font-size: 10px;
+    }
+    .title__text{
+        font-size: 25px;
+        max-width: 300px;
+    }
+    .specification__cost {
+        font-size: 13px;
+    }
+    .specification__qn{
+        width: 100px;
+    }
+    .appartments__bottom{
+        width: 95%;
+    }
+    .btn__allAppartments{
+        width: 150px;
+        font-size: 13px;
+    }
+    .search__input,.search__btn{
+        font-size: 13px;
+    }
+    .interpretation__box{
+        padding: 5px;
+        margin: 5px;
+        height: 120px;
+        width: 100%;
+    }
+    .interpretation__index{
+        display: none;
+    }
+    .interpretation__title{
+        font-size: 15px;
+    }
+    .services__top{
+        padding: 0;
+    }
+    .interpretation__text, .interpretation__link{
+        margin-left: 5px;
+    }
+    .interpretation__text{
+        line-height: 20px;
+    }
+    .interpretations__text{
+        width: 100%;
+    }
+    .agent__position{
+        font-size: 12px;
+    }
+    .agent__name{
+        font-size: 12px;
+    }
+    .agent__img{
+        height: 11px;
+    }
+    .agent__info {
+        height: 70px;
+    }
+    .contact__btn {
+        width: 200px;
+        height: 40px;
+        margin-left: 0px;
+        margin-top: 0px;
+        top: 0px;left: 0;
+        position: relative;
+    }
+    .contact__btn-text{
+        font-size: 12px;
+    }
+    .contact__img-btn{
+        height: 15px;
+    }
+    .section__contacts .contact__info:nth-child(even) {
+        padding-left: 50px;
+    }
+    .section__contacts .contact__info:nth-child(odd) {
+        padding-right: 50px;
+    }
+    .contact__text-btn{
+        width: 150px;height: 50px;
+        font-size: 15px;
+    }
+    .footer__btn{
+        width: 250px;height: 40px;
+    }
+    .footer__list{
+        margin-top: 15px;
+    }
+    .footer__copy{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 900px) and (orientation: portrait){
+    .newApartment__contacts{
+        width: 200px;
+        height: 70px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .newApartment__link{
+        font-size: 12px;
+    }
+    .header__nav {
+        width: 45%;
+    }
+    .newApartment__img{
+        width: 13px;
+    }
+    .newApartment__absolute{
+        left: 15px;
+        top: 15px;
+        min-height: 150px;
+    }
+    .scrollDown__btn {
+        bottom: 44px;
+        left: -31px;
+    }
+    .newApartment__title{
+        max-width: 300px;
+        font-size: 25px;
+    }
+    .search__container {
+        width: 300px;
+        height: 45px;
+    }
+    .about__statistic{
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+    .box__left{
+        min-height: max-content;
+        max-width: 100%;
+        height: max-content;
+        justify-content: space-evenly;
+    }
+    .box__right{
+        flex-wrap: nowrap;
+        min-width: 100%;
+        min-height: max-content;
+    }
+    .box__result{
+        width: 24%;
+    }
+    .result__number {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    .result__text {
+        font-size: 10px;
+    }
+    .title__text{
+        font-size: 25px;
+        max-width: 300px;
+    }
+    .specification__cost {
+        font-size: 13px;
+    }
+    .specification__qn{
+        width: 100px;
+    }
+    .appartments__bottom{
+        width: 95%;
+    }
+    .btn__allAppartments{
+        width: 150px;
+        font-size: 13px;
+    }
+    .search__input,.search__btn{
+        font-size: 13px;
+    }
+    .interpretation__box{
+        padding: 5px;
+        margin: 5px;
+        height: 120px;
+        width: 100%;
+    }
+    .interpretation__index{
+        display: none;
+    }
+    .interpretation__title{
+        font-size: 15px;
+    }
+    .services__top{
+        padding: 0;
+    }
+    .interpretation__text, .interpretation__link{
+        margin-left: 5px;
+    }
+    .interpretation__text{
+        line-height: 20px;
+    }
+    .interpretations__text{
+        width: 100%;
+    }
+    .agent__position{
+        font-size: 12px;
+    }
+    .agent__name{
+        font-size: 12px;
+    }
+    .agent__img{
+        height: 11px;
+    }
+    .agent__info {
+        height: 70px;
+    }
+    .contact__btn {
+        width: 200px;
+        height: 40px;
+        margin-left: 0px;
+        margin-top: 0px;
+        top: 0px;left: 0;
+        position: relative;
+    }
+    .contact__btn-text{
+        font-size: 12px;
+    }
+    .contact__img-btn{
+        height: 15px;
+    }
+    .section__contacts .contact__info:nth-child(even) {
+        padding-left: 50px;
+    }
+    .section__contacts .contact__info:nth-child(odd) {
+        padding-right: 50px;
+    }
+    .contact__text-btn{
+        width: 150px;height: 50px;
+        font-size: 15px;
+    }
+    .footer__btn{
+        width: 250px;height: 40px;
+    }
+    .footer__list{
+        margin-top: 15px;
+    }
+    .footer__copy{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 750px) and (orientation: landscape){
+
+
+
+    .header__nav{
+        display: none;
+    }
+    .header{
+        justify-content: flex-end;
+        min-height: 50px;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .logo__link{
+        margin: 0;
+        font-size: 20px;
+    }
+    .header__container{
+        width: 90%;
+    }
+    .btn__started {
+        width: 127px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .service__container{
+        flex-direction: column;
+    }
+    .service__right{
+        width: 100%;
+    }
+    .service__left{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .services__header{
+        padding: 10px;
+    }
+    .service__title{
+        margin-bottom: 10px;
+    }
+    .service__text{
+        margin-bottom: 20px;
+    }
+    .box__contact{
+        min-height: max-content;
+    }
+    .box__contact{
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    .section__contacts li:nth-child(odd) {
+        text-align: start;
+    }
+    .section__contacts .contact__info:nth-child(even), .section__contacts .contact__info:nth-child(odd){
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 750px) and (orientation: portrait){
+    .header__nav{
+        display: none;
+    }
+    .header{
+        justify-content: flex-end;
+        min-height: 50px;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .logo__link{
+        margin: 0;
+        font-size: 20px;
+    }
+    .header__container{
+        width: 90%;
+    }
+    .btn__started {
+        width: 127px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .service__container{
+        flex-direction: column;
+    }
+    .service__right{
+        width: 100%;
+    }
+    .service__left{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .services__header{
+        padding: 10px;
+    }
+    .service__title{
+        margin-bottom: 10px;
+    }
+    .service__text{
+        margin-bottom: 20px;
+    }
+    .box__contact{
+        min-height: max-content;
+    }
+    .box__contact{
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    .section__contacts li:nth-child(odd) {
+        text-align: start;
+    }
+    .section__contacts .contact__info:nth-child(even), .section__contacts .contact__info:nth-child(odd){
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) and (orientation: landscape){
+    .newApartment__title {
+        max-width: 200px;
+        font-size: 18px;
+    }
+    .newApartment__absolute{
+        min-height: max-content;
+        left: 5px; top: 5px;
+    }
+    .search__container {
+        width: 228px;
+        height: 32px;
+    }
+    .newApartment__link,.search__input, .search__btn {
+        font-size: 10px;
+    }
+    .scrollDown__btn{
+        display: none;
+    }
+    .newApartment__contacts {
+        width: 140px;
+        height: 60px;
+    }
+    .newApartment__img {
+        margin: 0 8px;
+        width: 10px;
+    }
+    .title__text {
+        font-size: 16px;
+        max-width: max-content;
+    }
+    .statistic__text{
+        line-height: 20px;
+    }
+    .box__result{
+        height: 90px;
+    }
+    .result__number {
+        font-size: 13px;
+        margin-bottom: 1px;
+        letter-spacing: 0px;
+    }
+    .result__text {
+        font-size: 8px;
+    }
+    .about__statistic {
+        min-height: 400px;
+    }
+    .appartment__title {
+        font-size: 8px;
+    }
+    .box__specifications {
+        flex-direction: column;
+        width: 100%;
+    }
+    .specification__qn {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .specification__quantity, .specification__name {
+        font-size: 8px;
+    }
+    .specification__img {
+        width: 10px;
+        height: 10px;
+    }
+    .specification__cost {
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .appartment__specifications {
+        height: 60px;
+    }
+    .appartments__bottom {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .btn__allAppartments {
+        width: 110px;
+        height: 32px;
+        font-size: 9px;
+        margin-bottom: 5px;
+        background-color: #ffcc01;
+    }
+    #appartments{
+        min-height: max-content;
+    }
+    .contact__text,.agents__text,.service__text,.interpretation__text,.interpretations__text, .services__text{
+        line-height: 20px;
+        max-width: max-content;
+    }
+    .section__agents {
+        min-height: max-content;
+    }
+    .agent__box {
+        padding: 2px;
+    }
+    .agent__position {
+        font-size: 10px;
+        letter-spacing: 0px;
+    }
+    .agent__contacts {
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+    }
+    .agent__name {
+        font-size: 8px;
+        letter-spacing: 0px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    .agent__img {
+        height: 8px;
+    }
+    .agent__links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .box__contact{
+        padding: 5px 0;
+    }
+    .contact__title {
+        font-size: 17px;
+        margin: 5px 0;
+    }
+    .contact__btn {
+        width: 140px;
+        height: 25px;
+    }
+    .contact__img-btn {
+        height: 12px;
+    }
+    .contact__btn-text {
+        font-size: 8px;
+    }
+    .contact__text-btn {
+        width: 146px;
+        height: 31px;
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .footer__btn {
+        width: 150px;
+        height: 32px;
+        font-size: 10px;
+    }
+    .footer__btn-img{
+        display: none;
+    }
+    .footer__main{
+        flex-direction: column-reverse;
+    }
+    .footer__logoCopy{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer__copy {
+        max-width: max-content;
+        font-size: 8px;
+    }
+    .logo__link {
+        margin: 0;
+    }
+    .logo__link {
+        font-size: 15px;
+    }
+    .footer__list {
+        margin-top: 7px;
+    }
+    .footer__nav{
+        width: 100%;
+    }
+    .footer__link{
+        font-size: 8px;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 480px) and (orientation: portrait){
+    .newApartment__title {
+        max-width: 200px;
+        font-size: 18px;
+    }
+    .newApartment__absolute{
+        min-height: max-content;
+        left: 5px; top: 5px;
+    }
+    .search__container {
+        width: 228px;
+        height: 32px;
+    }
+    .newApartment__link,.search__input, .search__btn {
+        font-size: 10px;
+    }
+    .scrollDown__btn{
+        display: none;
+    }
+    .newApartment__contacts {
+        width: 140px;
+        height: 60px;
+    }
+    .newApartment__img {
+        margin: 0 8px;
+        width: 10px;
+    }
+    .title__text {
+        font-size: 16px;
+        max-width: max-content;
+    }
+    .statistic__text{
+        line-height: 20px;
+    }
+    .box__result{
+        height: 90px;
+    }
+    .result__number {
+        font-size: 13px;
+        margin-bottom: 1px;
+        letter-spacing: 0px;
+    }
+    .result__text {
+        font-size: 8px;
+    }
+    .about__statistic {
+        min-height: 400px;
+    }
+    .appartment__title {
+        font-size: 8px;
+    }
+    .box__specifications {
+        flex-direction: column;
+        width: 100%;
+    }
+    .specification__qn {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .specification__quantity, .specification__name {
+        font-size: 8px;
+    }
+    .specification__img {
+        width: 10px;
+        height: 10px;
+    }
+    .specification__cost {
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .appartment__specifications {
+        height: 60px;
+    }
+    .appartments__bottom {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .btn__allAppartments {
+        width: 110px;
+        height: 32px;
+        font-size: 9px;
+        margin-bottom: 5px;
+        background-color: #ffcc01;
+    }
+    #appartments{
+        min-height: max-content;
+    }
+    .contact__text,.agents__text,.service__text,.interpretation__text,.interpretations__text, .services__text{
+        line-height: 20px;
+        max-width: max-content;
+    }
+    .section__agents {
+        min-height: max-content;
+    }
+    .agent__box {
+        padding: 2px;
+    }
+    .agent__position {
+        font-size: 10px;
+        letter-spacing: 0px;
+    }
+    .agent__contacts {
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+    }
+    .agent__name {
+        font-size: 8px;
+        letter-spacing: 0px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    .agent__img {
+        height: 8px;
+    }
+    .agent__links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .box__contact{
+        padding: 5px 0;
+    }
+    .contact__title {
+        font-size: 17px;
+        margin: 5px 0;
+    }
+    .contact__btn {
+        width: 140px;
+        height: 25px;
+    }
+    .contact__img-btn {
+        height: 12px;
+    }
+    .contact__btn-text {
+        font-size: 8px;
+    }
+    .contact__text-btn {
+        width: 146px;
+        height: 31px;
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .footer__btn {
+        width: 150px;
+        height: 32px;
+        font-size: 10px;
+    }
+    .footer__btn-img{
+        display: none;
+    }
+    .footer__main{
+        flex-direction: column-reverse;
+    }
+    .footer__logoCopy{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer__copy {
+        max-width: max-content;
+        font-size: 8px;
+    }
+    .logo__link {
+        margin: 0;
+    }
+    .logo__link {
+        font-size: 15px;
+    }
+    .footer__list {
+        margin-top: 7px;
+    }
+    .footer__nav{
+        width: 100%;
+    }
+    .footer__link{
+        font-size: 8px;
+        margin: 0;
+    }
+}

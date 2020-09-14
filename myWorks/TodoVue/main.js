@@ -2,16 +2,16 @@
 Vue.component('todo',{
     props: ['todo'],
     template:`
-    <li class="todo__item">
-        <button v-on:click="$emit('remove')">Выполнено</button>
-        <p>{{ todo }}</p>
-        <button v-on:click="$emit('remove')">Редактировать</button>
-        <button v-on:click="$emit('remove-todo')">Удалить</button>
-    </li> 
+        <li class="todo__item">
+            <button v-on:click="$emit('remove')">Выполнено</button>
+            <p>{{ todo }}</p>
+            <button v-on:click="$emit('remove')">Редактировать</button>
+            <button v-on:click="$emit('remove-todo')">Удалить</button>
+        </li>
     `
 })
 Vue.component('task',{
-    props:['newTaskText', 'index', 'taskTodos'],
+    props:['newTaskText', 'index', 'todos'],
     methods:{
         edit(){
             document.querySelector('.input__task').value = this.newTaskText
@@ -23,7 +23,7 @@ Vue.component('task',{
                 <h2 class="todo__title">{{index}}.{{ newTaskText }}</h2>
                 <ul>
                     <ul
-                        v-for="(todo, index) in taskTodos"
+                        v-for="(todo, index) in todos"
                         :key="todo.id"
                         >
                         <li>
@@ -44,15 +44,28 @@ let nextTaskId = 1
 
 var app = new Vue({
     el: '#app',
-    data() {
-        return{
+    data: {
             newTaskText: '',
             newTodoText: '',
-            todos: [],
-            tasks: []
-        }
+            todos:[],
+            tasks: {
+                id: "",
+                text: "",
+                todo: ""
+            }
     },
     methods: {
+        saveTask(){
+            const trimmedTextTask = this.newTaskText.trim()
+            if(trimmedTextTask) {
+                    this.tasks.id = nextTaskId++,
+                    this.tasks.text = trimmedTextTask,
+                    this.tasks.todo = this.todos
+                }
+                this.newTaskText = ''
+                this.newTodoText = ''
+                // this.todos.splice(0,this.todos.length) 
+        },
         addTodo () {
             const trimmedTextTodo = this.newTodoText.trim()
             if (trimmedTextTodo) {
@@ -61,20 +74,6 @@ var app = new Vue({
                     text: trimmedTextTodo
                 })
                 this.newTodoText = ''
-            }
-        },
-        saveTask(){
-            const trimmedTextTask = this.newTaskText.trim()
-            if(trimmedTextTask) {
-                this.tasks.push({
-                    id: nextTaskId++,
-                    text: trimmedTextTask,
-                    todo: this.todos
-                })
-                this.newTaskText = ''
-                this.newTodoText = ''
-                // this.todos.splice(0,this.todos.length)
-                
             }
         }
     }
