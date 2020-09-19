@@ -1,22 +1,20 @@
-
-Vue.component('todo',{
+Vue.component('todo', {
     props: ['todo', 'todoid'],
-    template:`
+    template: `
         <li class="todo__item">
-            <p>{{ todoid }}.</p>
-            <p class="itemTodo__title"><input type="checkbox" v-model="todo.checked">{{ todo.text }}</p>
+            <p class="itemTodo__title">{{ todoid }}.<input type="checkbox" v-model="todo.checked">{{ todo.text }}</p>
             <button v-on:click="$emit('remove-todo')">Удалить</button>
         </li>
     `
 })
-Vue.component('task',{
-    props:['newTaskText', 'index', 'todos'],
-    methods:{
-        edit(){
+Vue.component('task', {
+    props: ['newTaskText', 'index', 'todos'],
+    methods: {
+        edit() {
             document.querySelector('.input__task').value = this.newTaskText
         }
     },
-    template:`
+    template: `
         <li class="task__item">
             <div class="box__task">
                 <h2 class="todo__title">{{index}}.{{ newTaskText }}</h2>
@@ -30,9 +28,9 @@ Vue.component('task',{
             ></todo>
         </li>`
 })
-Vue.component('tasksfin',{
-    props:['newTasksfinText', 'index', 'todos'],
-    template:`
+Vue.component('tasksfin', {
+    props: ['newTasksfinText', 'index', 'todos'],
+    template: `
         <li class="task__item">
             <div class="box__task">
                 <h2 class="todo__title">{{index}}.{{ newTasksfinText }}</h2>
@@ -61,94 +59,92 @@ let indexTaskEdit = 0
 var app = new Vue({
     el: '#app',
     data: {
-            newTaskText: '',
-            newTodoText: '',
-            todos:[],
-            tasks: [],
-            tasksfin:[]
+        newTaskText: '',
+        newTodoText: '',
+        todos: [],
+        tasks: [],
+        tasksfin: []
     },
     methods: {
-        saveTask(){
+        saveTask() {
             const trimmedTextTask = this.newTaskText.trim()
             const trimmedTextTodo = this.newTodoText.trim()
-            if( trimmedTextTask ) {
+            if (trimmedTextTask) {
                 this.todos.push([])
                 this.tasks[0] = {
-                    text : trimmedTextTask,
-                    todo : this.todos[0]
+                    text: trimmedTextTask,
+                    todo: this.todos[0]
                 }
-                this.newTaskText =""
+                this.newTaskText = ""
             }
-            if ( trimmedTextTodo ) {
+            if (trimmedTextTodo) {
                 this.todos[0].push({
-                    checked : false,
+                    checked: false,
                     id: nextTodoId++,
                     text: trimmedTextTodo
                 })
                 this.tasks[0] = {
-                    text : this.tasks[0].text,
-                    todo : this.todos[0]
+                    text: this.tasks[0].text,
+                    todo: this.todos[0]
                 }
                 this.newTodoText = ''
             }
         },
-        editTask: function (event){
+        editTask: function(event) {
             this.removeTask();
             cheskBox = true;
             indexTaskEdit = Number(event.closest('.box__task')
                 .querySelector('.todo__title')
                 .innerHTML
                 .trim()
-                .charAt(0))-1;
+                .charAt(0)) - 1;
             this.todos[0] = [];
-            for(let i = 0; i < this.tasksfin[indexTaskEdit].tasks.todo.length; i++ ){
+            for (let i = 0; i < this.tasksfin[indexTaskEdit].tasks.todo.length; i++) {
                 this.todos[0].push({
-                    checked : this.tasksfin[indexTaskEdit].tasks.todo[i].checked,
+                    checked: this.tasksfin[indexTaskEdit].tasks.todo[i].checked,
                     id: this.tasksfin[indexTaskEdit].tasks.todo[i].id,
                     text: this.tasksfin[indexTaskEdit].tasks.todo[i].text
                 })
             }
             this.tasks[0] = {
-                id : this.tasksfin[indexTaskEdit].id,
-                text : this.tasksfin[indexTaskEdit].tasks.text,
-                todo : this.todos[0]
+                id: this.tasksfin[indexTaskEdit].id,
+                text: this.tasksfin[indexTaskEdit].tasks.text,
+                todo: this.todos[0]
             }
         },
-        saveTasksfin(){
-            if(!this.tasks[0]){
+        saveTasksfin() {
+            if (!this.tasks[0]) {
                 return false
             }
-            if(cheskBox){
-                indexTaskfin =  indexTaskEdit + 1;
+            if (cheskBox) {
+                indexTaskfin = indexTaskEdit + 1;
                 cheskBox = false;
-            } else{ indexTaskfin = nextTasksfinId++}
-            this.tasksfin[indexTaskfin-1] = {
-                id : indexTaskfin,
-                tasks : this.tasks[0]
+            } else { indexTaskfin = nextTasksfinId++ }
+            this.tasksfin[indexTaskfin - 1] = {
+                id: indexTaskfin,
+                tasks: this.tasks[0]
             }
             this.removeTask()
             this.newTodoText = ''
         },
-        removeTask(){
+        removeTask() {
             this.tasks.splice(index, 1);
             this.removeTodo();
             cheskBox = false;
         },
-        removeTaskfin: function (event){
+        removeTaskfin: function(event) {
             let indexRemove = Number(event.closest('.box__task')
                 .querySelector('.todo__title')
                 .innerHTML
                 .trim()
-                .charAt(0))-1;
+                .charAt(0)) - 1;
             this.tasksfin.splice(indexRemove, 1);
             this.removeTodo();
             cheskBox = false;
             nextTasksfinId--
         },
-        removeTodo(){
+        removeTodo() {
             this.todos.splice(index, 1)
         }
     }
 })
-
-
