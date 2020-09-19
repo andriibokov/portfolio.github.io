@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>vue</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="app">
-        <div class="container">
-            <div class="task__btn">
-                <button>➕ Создать новую заметку</button>
-            </div>
-            <ul>
-                <!-- :task-todos="task.todo" -->
-                <task
-                    v-for="(task, index) in tasks"
-                    :key="task.id"
-                    :new-task-text="task.text"
-                    :todos='task.todo'
-                    :index="index+1"
-                    v-on:remove-task="tasks.splice(index, 1)"
-                ></task>
-            </ul>
-            <div class="box__btn">
-                <button class="btn__delete">Удалить</button>
-                <button class="btn__canceling">Отменить</button>
-                <button class="btn__save" @click="saveTask">Сохранить</button>
-            </div>
-            <form @submit.prevent="">
-                <div class="box__input">
-                    <label class="input__label">Название заметки</label>
-                    <input
+    <head>
+        <meta charset="utf-8">
+        <title>vue</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <ul>
+                    <task
+                        v-for="(task, index) in tasks"
+                        :key="task.id"
+                        :new-task-text="task.text"
+                        :todos="task.todo"
+                        :index="index+1"
+                    ></task>
+                </ul>
+                <form @submit.prevent="">
+                    <div class="box__input">
+                        <label class="input__label">Название заметки</label>
+                        <input
                         type="text"
                         v-model="newTaskText"
                         @keydown.enter="saveTask"
                         class="input__task"
                         placeholder="0"
-                    >
-                </div>
-            <div class="box__input">
-                <label class="input__label">Добавить задачу</label>
-                <input
-                    type="text"
-                    v-model="newTodoText"
-                    @keydown.enter="addTodo"
-                    class="input__todo"
-                    placeholder="0"
-                >
-                <button @click="addTodo">Добавить</button>
+                        >
+                        <button @click="saveTask">Добавить</button>
+                    </div>
+                    <div class="box__input" v-show="this.tasks[0]">    
+                        <label class="input__label">Добавить задачу</label>
+                        <input
+                        type="text"
+                        v-model="newTodoText"
+                        @keydown.enter="saveTask"
+                        class="input__todo"
+                        placeholder="0"
+                        >
+                        <button @click="saveTask">Добавить</button>
+                    </div>
+                    <div class="box__btn">
+                        <button v-on:click='removeTask'>Отменить</button>
+                        <button class="btn__save" @click="saveTasksfin">Сохранить</button>
+                    </div>
+                </form>
+                <ul>
+                    <tasksfin
+                        class="list__tasksfin"
+                        v-for="(taskf, index) in tasksfin"
+                        :new-tasksfin-text="taskf.tasks.text"
+                        :todos="taskf.tasks.todo"
+                        :index="index+1"
+                        v-on:remove-task="removeTaskfin"
+                        v-on:edit-task="editTask"
+                    ></tasksfin>
+                </ul>
             </div>
-            </form>
-            <ul>
-                <todo
-                    v-for="(todo, index) in todos"
-                    :key="todo.id"
-                    :todo="todo.text"
-                    v-on:remove-todo="todos.splice(index, 1)"
-                ></todo>
-            </ul>
         </div>
-    </div>
-    <script src="./js/vue.js"></script>
+        <script src="./js/vue.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
